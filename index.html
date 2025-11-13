@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CipherSafe - Advanced Encryption Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif'],
+            },
+            colors: {
+              'background': '#2a2c25',
+              'aurora-start': 'rgba(203, 153, 126, 0.4)', // #CB997E
+              'aurora-mid': 'rgba(221, 190, 169, 0.45)',  // #DDBEA9
+              'aurora-end': 'rgba(165, 165, 141, 0.4)',   // #A5A58D
+              'glow-start': '#CB997E',
+              'glow-end': '#A5A58D',
+              'panel': 'rgba(73, 77, 64, 0.6)',
+              'text-primary': '#DDBEA9',
+              'text-secondary': '#A5A58D',
+              'olive-dark': '#6B705C',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'slide-in-up': 'slideInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+              'aurora-bg': 'auroraBg 20s ease infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0 },
+                '100%': { opacity: 1 },
+              },
+              slideInUp: {
+                '0%': { transform: 'translateY(30px)', opacity: 0 },
+                '100%': { transform: 'translateY(0)', opacity: 1 },
+              },
+              auroraBg: {
+                '0%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+                '100%': { backgroundPosition: '0% 50%' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #2a2c25;
+        --star-color: rgba(221, 190, 169, 0.4);
+        background-image: 
+          radial-gradient(1px 1px at 20px 30px, var(--star-color), transparent),
+          radial-gradient(1px 1px at 80px 60px, var(--star-color), transparent),
+          radial-gradient(1px 1px at 150px 120px, var(--star-color), transparent),
+          radial-gradient(2px 2px at 250px 90px, var(--star-color), transparent),
+          radial-gradient(1px 1px at 100px 200px, var(--star-color), transparent),
+          radial-gradient(1px 1px at 50px 250px, var(--star-color), transparent);
+        background-size: 300px 300px;
+        animation: moveStars 60s linear infinite;
+      }
+      @keyframes moveStars {
+        from { background-position: 0 0; }
+        to { background-position: -300px 300px; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="text-text-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

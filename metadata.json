@@ -1,0 +1,5 @@
+
+{
+  "name": "CipherSafe",
+  "description": "A modern and sleek web application to securely encrypt and decrypt your sensitive data using the Web Crypto API. Simply enter your text, set a password, and get a securely encrypted string. Decrypt it anytime with the same password."
+}
